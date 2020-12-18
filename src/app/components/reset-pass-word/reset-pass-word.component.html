@@ -1,0 +1,33 @@
+<div class="reset-password">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>カウンセラーログイン</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="outline" class="input-outline">
+                <mat-label>メールアドレス</mat-label>
+                <input class="input email" matInput [(ngModel)]="auth.email" (keyup.enter)="handleSubmit()">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="input-outline">
+                <mat-label>新しいパスワード</mat-label>
+                <input class="input password" type="password" matInput [(ngModel)]="auth.password"
+                    (keyup.enter)="handleSubmit()">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="input-outline">
+                <mat-label>新しいパスワード（確認用）</mat-label>
+                <input class="input confirmPassword" type="password" matInput (keyup.enter)="handleSubmit()">
+            </mat-form-field>
+            <div class="note">
+                <p>パスワードを忘れた人はこちら</p>
+            </div>
+            <div class="wrapper-action">
+                <div class="wrapper-button">
+                    <button class="button-submit" (click)="handleSubmit()">更新する</button>
+                </div>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+
+</div>
+<!-- <router-outlet></router-outlet> -->

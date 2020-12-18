@@ -1,0 +1,27 @@
+<div class="login">
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>カウンセラーログイン</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field appearance="outline" class="input-outline">
+          <mat-label>メールアドレス</mat-label>
+        <input class="input email" matInput [(ngModel)]="auth.email" (keyup.enter)="handleSubmit()">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="input-outline">
+          <mat-label>パスワード</mat-label>
+          <input class="input password" type="password" matInput [(ngModel)]="auth.password" (keyup.enter)="handleSubmit()">
+        </mat-form-field>
+        <div class="wrapper-action">
+          <div class="wrapper-button">
+            <button class="button-submit" (click)="handleSubmit()" routerLink="/counselor">ログイン</button>
+          </div>
+        </div>
+        <div class="forgot-password">
+          <a routerLink="/resetPassword">パスワードを忘れた人はこちら</a>
+        </div>
+    </mat-card-content> 
+  </mat-card>
+
+</div>
+<!-- <router-outlet></router-outlet> -->
